@@ -10,8 +10,8 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 Default users are available to test differents roles:
-
 login, password:
+
 admin, admin
 manager, manager
 user1, user1
