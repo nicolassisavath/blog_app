@@ -1,0 +1,123 @@
+
+
+	Jour1: mardi 10 Avril
+schema enchainements d'écrans
+MCD
+BDD
+manual fill of BDD
+CoreController
+ModelController
+
+	Jour2: mercredi 11 Avril
+getConnectedUser/getRoles/hasRole
+getArticles
+getUser
+getComments
+getResponsesByComment
+
+	Jour3: mardi 17 Avril
+CreateUser
+Verification etat d'authentification pour afficher form postComment
+
+	Jour4: mercredi 18 Avril
+gestion post reponse a un commentaire
+gestion authorisations users for 
+	post comment 
+	create user 
+cration espace admin ManagerMenu
+ArticleManagerMenu
+	-new
+	-display
+	-update
+	-delete
+
+	Jour5: jeudi 19 Avril
+Gestion articles
+	gerer tags pr new Article
+		-afficher selection tags pr new article
+		-creer lien table intermediaire article_tag
+	page de confirmation de suppression d'article (ou popup, JS...)
+		-gerer les cascades
+			- comment
+			- article_tag
+
+	Jour6: vencdredi 20 Avril
+	*gerer affichage des articles par tag selectionné par ordre decroissant de creation 
+
+	Jour7: mardi 24 Avril
+
+
+	Jour8: jeudi 26 Avril
+
+	TO DO:
+	*Modification article
+		-renvoi des donnees entrees en cas d'erreur de soumission
+		-Ajout du bouton display CommentsByArticle
+
+
+	*pouvoir annuler la saisie de reponse a un commentaire
+
+	*Gestion users
+
+	*Pour l'affichage des commentaires, si le user est manager
+		-Display alerted comments in red if more than 5 alerts
+		-Display alerted comments in orande if between 1 and 4 alerts
+
+
+	*Commentaires
+		-possibilite d'alerter sur un commentaire
+		-create @user
+		-display @anonym
+			@Manager
+			-display comment and responses
+		-update @author @Manager
+			-if enabled and commentHasResponses
+				-enable Responses
+		-delete @author @Manager
+			-if commentsHasResponses
+				-Delete Responses
+			-showForm
+			-Manage
+		- gerer l'affichage de commentaires supplementaires
+			- voir systeme (pagination, ajax scroll)
+			- restreindre l'affichage aux 10 premiers
+
+	*Articles :Reflechir aux consequences de l'ajout 
+		-d'image descriptive
+		-date de mise a jour
+			-create
+			-display
+			-update
+			-delete
+				-showForm
+				-Manage
+
+	*Possibilite afficher articles par
+		-les plus commentéss
+		-les plus recents
+
+	*Themes
+		-create @Manager
+		-display @anonym
+		-update @Manager
+		-delete @Manager
+			-showForm
+			-Manage
+
+	*Topics
+	-add alert
+		-create @user
+		-display @anonym
+		-update @author & @Manager
+		-delete @Manager
+			-showForm
+			-Manage
+
+	*Posts
+	-add alert
+		-create @user
+		-display @anonym
+		-update @author @Manager
+		-delete @author @Manager
+			-showForm
+			-Manage
